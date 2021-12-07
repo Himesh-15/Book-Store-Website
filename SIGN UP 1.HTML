@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>SIGN UP</TITLE>
+<STYLE>
+input[type="text"]{
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 330px;
+  height: 32px;
+ }
+input[type="password"]{
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 500px;
+  height: 32px;
+ }
+ input[type="reset"]{
+ width: 100px;
+ height: 32px;
+ font-weight: bold;
+ }
+</STYLE>
+<SCRIPT>
+function validate()
+{
+var n=document.getElementById('name');
+var m=document.getElementById('mobile');
+var e=document.getElementById('email');
+
+var patt_name=/(^[A-Za-z/;
+var patt_mobile=/^[7-9][0-9]{9}/;
+var patt_email=/^([A-za-z0-9\.-]+)@([A-za-z0-9-]+).([a-z]{2,3})$/;
+if(n.value=="")
+{
+alert("Name need value");
+n.style.border="2px solid red";
+m.style.border="2px solid red";
+e.style.border="2px solid red";
+return false;
+}
+else 
+{
+	if(m.value==""){
+	alert("Mobile need value");
+	m.style.border="2px solid red";
+	return false;
+	}
+	else
+	{
+		if(e.value==""){
+		alert("email need value");
+		e.style.border="2px solid red";
+		return false;
+		}
+		else{
+		
+				if(patt_name.test(n.value))
+				{
+					if(patt_mobile.test(m.value))
+					{
+						if(patt_email.test(e.value))
+						{
+						alert("Data Submitted\nYour Customer id is'CUSTID-name1234'");
+						return true;
+						}
+						else{
+							alert("Email is not correct");
+							e.style.border="2px solid red";
+							return false;
+							}
+					
+					}
+					else{
+					alert("Mobile is not correct");
+					m.style.border="2px solid red";
+					return false;
+					}
+				}
+				else{
+					alert("Name is not correct");
+					n.style.border="2px solid red";
+					return false;
+					}
+			}
+	}
+}
+
+
+}
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#feffb8">
+<H1><CENTER>CREATE A FREE ACCOUNT</CENTER></H1>
+<BR>
+<form name="fname" onsubmit="return validate()" action="mailto:ganwanihk@rknec.edu?subject=MyData" method="POST" enctype="text/plain">
+<H3><U>PERSONAL DETAILS:</U></H3>
+<BR>
+<div style="width: 100%;">
+
+<div style="width: 100%;">
+<div style="width: 50%; height=: 100px; float: left;">
+FIRST NAME &nbsp;&nbsp;<input type="text" name="fname" id="name" >
+<BR>
+GENDER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <INPUT TYPE="RADIO" NAME="GENDER">MALE
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="RADIO" NAME="GENDER">FEMALE
+</div>
+<div style="margin-left: 50%; height: 100px;">
+LAST NAME &nbsp;&nbsp;<INPUT TYPE="TEXT" NAME="LNAME" MAXLENGTH="100">
+<BR>
+<label for="DOB">DATE OF BIRTH &nbsp;&nbsp;</label>
+<input type="date" id="DOB" name="DOB">
+</div>
+</div>
+<BR>
+<H3><U>CONTACT DETAILS:</U></H3>
+<BR>
+<div style="width: 100%;">
+<div style="width: 50%; height=: 80px; float: left;">
+EMAIL ID &nbsp;&nbsp;<input type="text" name="email" id="email">
+</div>
+<div style="margin-left: 50%; height: 80px;">
+MOBILE NO. &nbsp;&nbsp; <INPUT TYPE="TEXT" MAXLENGTH="3" STYLE=" width: 70px;" VALUE="+91" disabled>
+&nbsp; <input type="text" name="mobile" id="mobile" maxlength="10">
+</div>
+</div>
+<H3><U>ACCOUNT DETAILS</U></H3>
+<BR>
+CREATE A USERNAME &nbsp;&nbsp;<INPUT TYPE="TEXT" NAME="USERNAME" MAXLENGTH="100" STYLE=" width: 500px;" ID="username" required><BR>
+CREATE A PASSWORD &nbsp;&nbsp;<INPUT TYPE="PASSWORD" NAME="PASSWORD" MAXLENGTH="100" ID="password1" required><BR>
+CONFIRM PASSWORD &nbsp;&nbsp;<INPUT TYPE="PASSWORD" NAME="PASSWORD2" MAXLENGTH="100" ID="password2" required>
+<BR><BR><BR><BR>
+<INPUT TYPE="CHECKBOX" NAME="TERMS">&nbsp;&nbsp;I ACCEPT THE TERMS AND CONDITIONS SPECIFIED BY THE ORGANIZATION<BR>
+<BR><BR><BR>
+<div style="width: 100%;">
+<div style="margin-left: 45%; float: left;">
+<input type="submit" value="SUBMIT" STYLE="width: 100px; height: 32px; font-weight: bold;">
+</div>
+<div style="margin-left: 55%;">
+<input type="reset" value="RESET" >
+</div>
+</div>
+</div>
+</FORM>
+</BODY>
+</HTML>

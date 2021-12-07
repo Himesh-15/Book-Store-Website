@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>BOOK ORDER</TITLE>
+<STYLE>
+input[type="text"],
+input[type="password"] {
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 330px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+}
+input[type="submit"] {
+  margin-top: 28px;
+  width: 150px;
+  height: 32px;
+  background: #faf9b4;
+  }
+input[type="button"]{
+  margin-top: 30px;
+  width: 300px;
+  height: 32px;
+  font-weight: bold;
+  color: #ffffff;
+}
+</STYLE>
+</HEAD>
+<BODY>
+<div style="width: 100%;">
+<div style="margin-left: 10%; width: 50%; height: 100px; float: left;">
+<H1>SIGN IN</H1>
+<BR><BR>
+<FORM NAME="SIGN IN" METHOD="POST">
+<P>CUSTOMER ID<BR><INPUT TYPE="TEXT" PATTERN="[a-z]{4}[0-9]{4}" STYLE="width: 110px;" MAXLENGTH="7" NAME="CUSTID" VALUE="CUSTID-" disabled><INPUT TYPE="TEXT" MAXLENGTH="8" STYLE="width: 220px;" NAME="id" required></P>
+<P>USERNAME<BR><INPUT TYPE="TEXT" MAXLENGTH="50" NAME="USERNAME" required></P>
+<P>EMAIL ID<BR><INPUT TYPE="TEXT" MAXLENGTH="30" NAME="EMAIL" required></P>
+<P>PASSWORD<BR><INPUT TYPE="PASSWORD" MAXLENGTH="20" NAME="PAASWORD" required></P><BR>
+<INPUT TYPE="SUBMIT" VALUE="SIGN IN">
+</FORM>
+<BR>
+<P> Don't have an account? &nbsp;<A HREF="SIGN UP 1.HTML"> SIGN UP  </A> &nbsp; for free.</P>
+</div>
+
+<div style="margin-left: 50%; height: 120%; background: url(1.jpeg) no-repeat; background-position: center;">
+<BR><BR><BR>
+<div class="transbox" style=" background-color: #ffffff; opacity: 0.6;">
+<H2><B>LOG IN WITH SOCIAL MEDIA</B></H2>
+</div>
+<BR><BR><BR>
+<FORM>
+<CENTER>
+<INPUT TYPE="BUTTON" VALUE="LOG IN WITH GOOGLE+" STYLE="BACKGROUND: #f7020b;"><BR>
+<INPUT TYPE="BUTTON" VALUE="LOG IN WITH TWITTER" STYLE="BACKGROUND: #91edff;"><BR>
+<INPUT TYPE="BUTTON" VALUE="LOG IN WITH FACEBOOK" STYLE="BACKGROUND: #4e24f2;">
+</CENTER>
+</FORM>
+
+
+</div>
+</div>
+</BODY>
+</HTML>
